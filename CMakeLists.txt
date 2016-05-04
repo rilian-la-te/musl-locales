@@ -1,0 +1,6 @@
+project(locales C)
+cmake_minimum_required(VERSION 2.8)
+list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+set(LOCALE_SOURCES locale.c categories.c categories.h)
+add_executable(locale ${LOCALE_SOURCES})
+add_subdirectory(po)
