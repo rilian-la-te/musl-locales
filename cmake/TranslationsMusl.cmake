@@ -1,7 +1,7 @@
 # Translations.cmake, CMake macros written for Marlin, feel free to re-use them
 
-macro (add_translations_directory NLS_PACKAGE LOCPATH)
-    add_custom_target (i18n ALL COMMENT ?Building i18n messages.?)
+macro (add_musl_translations_directory NLS_PACKAGE LOCPATH)
+    add_custom_target (musl-i18n ALL COMMENT ?Building i18n messages for C library.?)
     find_program (MSGFMT_EXECUTABLE msgfmt)
     # be sure that all languages are present
     # Using all usual languages code from https://www.gnu.org/software/gettext/manual/html_node/Language-Codes.html#Language-Codes
@@ -20,12 +20,12 @@ macro (add_translations_directory NLS_PACKAGE LOCPATH)
         set (MO_OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${PO_INPUT_BASE}.mo)
         set (PO_COPY ${CMAKE_CURRENT_BINARY_DIR}/${PO_INPUT_BASE}.po)
         file (COPY ${PO_INPUT} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-        add_custom_command (TARGET i18n COMMAND ${MSGFMT_EXECUTABLE} -o ${MO_OUTPUT} ${PO_INPUT})
+        add_custom_command (TARGET musl-i18n COMMAND ${MSGFMT_EXECUTABLE} -o ${MO_OUTPUT} ${PO_INPUT})
 
         install (FILES ${MO_OUTPUT} DESTINATION
             ${LOCPATH})
     endforeach (PO_INPUT ${PO_FILES})
-endmacro (add_translations_directory)
+endmacro (add_musl_translations_directory)
 
 # Apply the right default template.
 macro (create_po_file LANGUAGE_NEEDED)
@@ -89,8 +89,8 @@ macro (create_po_file LANGUAGE_NEEDED)
     endif ()
 endmacro (create_po_file)
 
-macro (add_translations_catalog NLS_PACKAGE)
-    add_custom_target (pot COMMENT ?Building translation catalog.?)
+macro (add_musl_translations_catalog NLS_PACKAGE)
+    add_custom_target (musl-pot COMMENT ?Building translation catalog for C library.?)
     find_program (XGETTEXT_EXECUTABLE xgettext)
 
     set(C_SOURCE "")
@@ -112,7 +112,7 @@ macro (add_translations_catalog NLS_PACKAGE)
    set(CONTINUE_FLAG "")
 
     IF(NOT "${C_SOURCE}" STREQUAL "")
-        add_custom_command(TARGET pot WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} COMMAND ${BASE_XGETTEXT_COMMAND} ${C_SOURCE})
+        add_custom_command(TARGET musl-pot WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} COMMAND ${BASE_XGETTEXT_COMMAND} ${C_SOURCE})
         set(CONTINUE_FLAG "-j")
     ENDIF()
-endmacro ()
+endmacro (add_musl_translations_catalog)

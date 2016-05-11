@@ -1,12 +1,11 @@
-/* vi: set sw=4 ts=4: */
 /*
  *
- * Copyright (c) 2008  STMicroelectronics Ltd
- * Filippo Arcidiacono (filippo.arcidiacono@st.com)
+ * Copyright (c) 2016  Konstantin Pugin
+ * Konstantin Pugin (ria.freelander@gmail.com)
  *
- * Licensed under the LGPL v2.1, see the file COPYING.LIB in this tarball.
+ * Licensed under the LGPL v3.
  *
- * A 'locale' command implementation for uClibc.
+ * A 'locale' command implementation for musl.
  *
  */
 
@@ -22,6 +21,8 @@
 #include <dirent.h>
 #include <locale.h>
 #include <stdbool.h>
+#include <libintl.h>
+#include "config.h"
 #include "categories.h"
 
 
@@ -55,7 +56,6 @@ static void usage(char *name)
             "\t-c, --category-name\tWrite names of selected categories\n"
             "\t-k, --keyword-name\tWrite names of selected keywords\n"
             , s);
-    free(s);
 }
 
 static int argp_parse(int argc, char *argv[])
@@ -105,12 +105,15 @@ static int argp_parse(int argc, char *argv[])
 static void list_locale()
 {
     const char *locpath = getenv("MUSL_LOCPATH");
-    DIR *dir = opendir(locpath);
-    struct dirent *pDir;
-    printf("C");
-    printf("C.UTF-8");
-    while ((pDir = readdir(dir)) != NULL){
-        printf("%s.%s\n",pDir->d_name,"UTF-8");
+    printf("C\n");
+    printf("C.UTF-8\n");
+    if(locpath != NULL)
+    {
+        DIR *dir = opendir(locpath);
+        struct dirent *pDir;
+        while ((pDir = readdir(dir)) != NULL){
+            printf("%s.%s\n",pDir->d_name,"utf8");
+        }
     }
 }
 
@@ -139,12 +142,13 @@ static void print_item (struct cat_item item)
         if (show_keyword_name)
             printf ("%s=\"", item.name);
 
-        for (int cnt = item.min; cnt <= item.max; ++cnt)
+        for (int cnt = item.min; cnt <= item.max; cnt++)
         {
-            val = nl_langinfo (item.id);
+            val = nl_langinfo (cnt);
             if (val != NULL)
                 fputs (val, stdout);
-            putchar (';');
+            if (cnt < item.max)
+                putchar (';');
         }
         if (show_keyword_name)
             putchar ('"');
@@ -157,7 +161,7 @@ static void print_item (struct cat_item item)
 /* Show the information request for NAME.  */
 static void show_info(const char *name)
 {
-    for (size_t cat_no = 0; cat_no < LC_ALL; ++cat_no)
+    for (size_t cat_no = 0; cat_no < LC_ALL; cat_no++)
     {
         if (strcmp (name, get_name_for_cat(cat_no)) == 0)
         /* Print the whole category.  */
@@ -169,14 +173,10 @@ static void show_info(const char *name)
                 print_item(items[j]);
             return;
         }
-        else
-        {
-            if (show_category_name != 0)
-                puts (get_name_for_cat(cat_no));
-            print_item(get_cat_item_for_name(name));
-        }
-
     }
+    if (show_category_name != 0)
+        puts (get_cat_name_for_item_name(name));
+    print_item(get_cat_item_for_name(name));
 }
 
 static void show_locale_vars()
@@ -198,12 +198,20 @@ static void show_locale_vars()
 
 int main(int argc, char *argv[])
 {
+    if (setlocale (LC_CTYPE, "") == NULL)
+      fprintf (stderr, gettext ("Cannot set LC_CTYPE to default locale"));
+    if (setlocale (LC_MESSAGES, "") == NULL)
+      fprintf (stderr, gettext ("Cannot set LC_MESSAGES to default locale"));
     /* Parse and process arguments.  */
+    textdomain (PACKAGE);
     if (argp_parse(argc, argv))
         return 1;
 
     if (do_all) {
-        list_locale();
+        if (setlocale (LC_COLLATE, "") == NULL)
+            fprintf (stderr, gettext ("Cannot set LC_COLLATE to default locale"));
+        else
+            list_locale();
         exit(EXIT_SUCCESS);
     }
 
@@ -217,6 +225,8 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
     }
 
+    if (setlocale (LC_ALL, "") == NULL)
+        fprintf (stderr, gettext ("Cannot set LC_ALL to default locale"));
     /* If no real argument is given we have to print the contents of the
        current locale definition variables. These are LANG and the LC_*.  */
     if (remaining == argc && show_category_name == 0

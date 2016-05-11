@@ -1,3 +1,13 @@
+/*
+ *
+ * Copyright (c) 2016  Konstantin Pugin
+ * Konstantin Pugin (ria.freelander@gmail.com)
+ *
+ * Licensed under the LGPL v3.
+ *
+ * A 'locale' command implementation for musl.
+ *
+ */
 #ifndef CATEGORIES_H
 #define CATEGORIES_H
 
@@ -29,4 +39,5 @@ const struct cat_item get_cat_item_for_name(const char* name);
 const struct cat_item* get_cat_for_locale_cat(int locale_cat);
 int get_cat_num_for_name(const char *cat_name);
 const char* get_name_for_cat(int cat_no);
+const char* get_cat_name_for_item_name(const char *name);
 #endif // CATEGORIES_H

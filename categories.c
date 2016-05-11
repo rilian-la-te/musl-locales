@@ -1,3 +1,13 @@
+/*
+ *
+ * Copyright (c) 2016  Konstantin Pugin
+ * Konstantin Pugin (ria.freelander@gmail.com)
+ *
+ * Licensed under the LGPL v3.
+ *
+ * A 'locale' command implementation for musl.
+ *
+ */
 #include "categories.h"
 #include <stdlib.h>
 #include <string.h>
@@ -77,6 +87,19 @@ const struct cat_item get_cat_item_for_name(const char *name)
         }
     }
     return invalid;
+}
+
+const char* get_cat_name_for_item_name(const char *name)
+{
+    for(int i = 0; i < LC_ALL; i++)
+    {
+        for(int j = 0; cats[i][j].type != CAT_TYPE_END; j++)
+        {
+            if(!strcmp(name,cats[i][j].name))
+                return get_name_for_cat(i);
+        }
+    }
+    return "";
 }
 
 const struct cat_item* get_cat_for_locale_cat(int locale_cat)
