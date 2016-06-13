@@ -6,7 +6,7 @@ macro (add_translations_directory NLS_PACKAGE)
     # be sure that all languages are present
     # Using all usual languages code from https://www.gnu.org/software/gettext/manual/html_node/Language-Codes.html#Language-Codes
     # Rare language codes should be added on-demand.
-    set (LANGUAGES_NEEDED ru)
+    set (LANGUAGES_NEEDED en ru)
     string (REPLACE ";" " " LINGUAS "${LANGUAGES_NEEDED}")
     configure_file (${CMAKE_CURRENT_SOURCE_DIR}/LINGUAS.in ${CMAKE_CURRENT_BINARY_DIR}/LINGUAS)
     foreach (LANGUAGE_NEEDED ${LANGUAGES_NEEDED})

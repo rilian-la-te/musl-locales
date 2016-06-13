@@ -1,0 +1,760 @@
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1700
+#, c-format
+msgid "Error loading shared library %s: %m"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1603
+#, c-format
+msgid "%s: Error getting %zu bytes thread-local storage: %m\n"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1699
+#, c-format
+msgid "Library %s is not already loaded"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1503
+#, c-format
+msgid "%s: %s: Not a valid dynamic program\n"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1087
+#, c-format
+msgid "Error loading shared library %s: %m (needed by %s)"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1158
+#, c-format
+msgid "Error relocating %s: RELRO protection failed: %m"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:875
+#, c-format
+msgid "Error allocating function descriptors for %s"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:448
+#, c-format
+msgid "Error relocating %s: unsupported relocation type %d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/exit/assert.c:6
+#, c-format
+msgid "Assertion failed: %s (%s: %s: %d)\n"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:340
+#, c-format
+msgid "Error relocating %s: %s: symbol not found"
+msgstr ""
+
+#: ../musl/musl-1.1.14/ldso/dynlink.c:426
+#, c-format
+msgid "Error relocating %s: cannot allocate TLSDESC for %s"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/ldso/dlerror.c:14
+msgid "Dynamic linker failed to allocate memory for error message"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/ldso/dlerror.c:60
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1742
+#, c-format
+msgid "Invalid library handle %p"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/ldso/dlopen.c:9
+msgid "Dynamic loading not supported"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/ldso/dlinfo.c:14
+#, c-format
+msgid "Unsupported request %d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/ldso/__dlsym.c:9
+#: ../musl/musl-1.1.14/ldso/dynlink.c:1824
+#, c-format
+msgid "Symbol not found: %s"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/malloc/malloc.c:143
+#, c-format
+msgid "missing from binmap!\n"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/malloc/malloc.c:145
+#, c-format
+msgid "binmap wrongly contains %d!\n"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:30
+msgid "label"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:30
+msgid "severity"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:30
+msgid "text"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:30
+msgid "action"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:30
+msgid "tag"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:36
+msgid "HALT: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:37
+msgid "ERROR: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:38
+msgid "WARNING: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/fmtmsg.c:39
+msgid "INFO: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/getopt_long.c:84
+msgid ": option does not take an argument: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/getopt_long.c:95
+#: ../musl/musl-1.1.14/src/misc/getopt.c:91
+msgid ": option requires an argument: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/getopt_long.c:112
+msgid ": option is ambiguous: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/misc/getopt_long.c:113
+#: ../musl/musl-1.1.14/src/misc/getopt.c:83
+msgid ": unrecognized option: "
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/regex/regerror.c:13
+msgid "No error"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/string/strsignal.c:57
+msgid "Unknown signal"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/network/hstrerror.c:6
+msgid "Host not found"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/network/gai_strerror.c:5
+msgid "Invalid flags"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:89
+#, c-format
+msgid "%2d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:92
+msgid "%Y-%m-%d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:141
+msgid "\t"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:174
+#, c-format
+msgid "+%lld"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:184
+#, c-format
+msgid "%+.2d%.2d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:202
+#, c-format
+msgid "%0*lld"
+msgstr ""
+
+msgid "Illegal byte sequence"
+msgstr ""
+
+msgid "Domain error"
+msgstr ""
+
+msgid "Result not representable"
+msgstr ""
+
+msgid "Not a tty"
+msgstr ""
+
+msgid "Permission denied"
+msgstr ""
+
+msgid "Operation not permitted"
+msgstr ""
+
+msgid "No such file or directory"
+msgstr ""
+
+msgid "No such process"
+msgstr ""
+
+msgid "File exists"
+msgstr ""
+
+msgid "Value too large for data type"
+msgstr ""
+
+msgid "No space left on device"
+msgstr ""
+
+msgid "Resource busy"
+msgstr ""
+
+msgid "Interrupted system call"
+msgstr ""
+
+msgid "Resource temporarily unavailable"
+msgstr ""
+
+msgid "Invalid seek"
+msgstr ""
+
+msgid "Cross-device link"
+msgstr ""
+
+msgid "Read-only file system"
+msgstr ""
+
+msgid "Directory not empty"
+msgstr ""
+
+msgid "Connection reset by peer"
+msgstr ""
+
+msgid "Operation timed out"
+msgstr ""
+
+msgid "Connection refused"
+msgstr ""
+
+msgid "Host is down"
+msgstr ""
+
+msgid "Host is unreachable"
+msgstr ""
+
+msgid "Address in use"
+msgstr ""
+
+msgid "Broken pipe"
+msgstr ""
+
+msgid "I/O error"
+msgstr ""
+
+msgid "No such device or address"
+msgstr ""
+
+msgid "Block device required"
+msgstr ""
+
+msgid "No such device"
+msgstr ""
+
+msgid "Not a directory"
+msgstr ""
+
+msgid "Is a directory"
+msgstr ""
+
+msgid "Text file busy"
+msgstr ""
+
+msgid "Exec format error"
+msgstr ""
+
+msgid "Invalid argument"
+msgstr ""
+
+msgid "Argument list too long"
+msgstr ""
+
+msgid "Symbolic link loop"
+msgstr ""
+
+msgid "Filename too long"
+msgstr ""
+
+msgid "Too many open files in system"
+msgstr ""
+
+msgid "No file descriptors available"
+msgstr ""
+
+msgid "Bad file descriptor"
+msgstr ""
+
+msgid "No child process"
+msgstr ""
+
+msgid "Bad address"
+msgstr ""
+
+msgid "File too large"
+msgstr ""
+
+msgid "Too many links"
+msgstr ""
+
+msgid "No locks available"
+msgstr ""
+
+msgid "Resource deadlock would occur"
+msgstr ""
+
+msgid "State not recoverable"
+msgstr ""
+
+msgid "Previous owner died"
+msgstr ""
+
+msgid "Operation canceled"
+msgstr ""
+
+msgid "Function not implemented"
+msgstr ""
+
+msgid "No message of desired type"
+msgstr ""
+
+msgid "Identifier removed"
+msgstr ""
+
+msgid "Device not a stream"
+msgstr ""
+
+msgid "No data available"
+msgstr ""
+
+msgid "Device timeout"
+msgstr ""
+
+msgid "Out of streams resources"
+msgstr ""
+
+msgid "Link has been severed"
+msgstr ""
+
+msgid "Protocol error"
+msgstr ""
+
+msgid "Bad message"
+msgstr ""
+
+msgid "File descriptor in bad state"
+msgstr ""
+
+msgid "Not a socket"
+msgstr ""
+
+msgid "Destination address required"
+msgstr ""
+
+msgid "Message too large"
+msgstr ""
+
+msgid "Protocol wrong type for socket"
+msgstr ""
+
+msgid "Protocol not available"
+msgstr ""
+
+msgid "Protocol not supported"
+msgstr ""
+
+msgid "Socket type not supported"
+msgstr ""
+
+msgid "Not supported"
+msgstr ""
+
+msgid "Protocol family not supported"
+msgstr ""
+
+msgid "Address family not supported by protocol"
+msgstr ""
+
+msgid "Address not available"
+msgstr ""
+
+msgid "Network is down"
+msgstr ""
+
+msgid "Network unreachable"
+msgstr ""
+
+msgid "Connection reset by network"
+msgstr ""
+
+msgid "Connection aborted"
+msgstr ""
+
+msgid "No buffer space available"
+msgstr ""
+
+msgid "Socket is connected"
+msgstr ""
+
+msgid "Socket not connected"
+msgstr ""
+
+msgid "Cannot send after socket shutdown"
+msgstr ""
+
+msgid "Operation already in progress"
+msgstr ""
+
+msgid "Operation in progress"
+msgstr ""
+
+msgid "Stale file handle"
+msgstr ""
+
+msgid "Remote I/O error"
+msgstr ""
+
+msgid "Quota exceeded"
+msgstr ""
+
+msgid "No medium found"
+msgstr ""
+
+msgid "Wrong medium type"
+msgstr ""
+
+msgid "No error information"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
+msgid "Mon"
+msgstr ""
+
+msgid "Tue"
+msgstr ""
+
+msgid "Wed"
+msgstr ""
+
+msgid "Thu"
+msgstr ""
+
+msgid "Fri"
+msgstr ""
+
+msgid "Sat"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "Dec"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "AM"
+msgstr ""
+
+msgid "PM"
+msgstr ""
+
+msgid "%a %b %e %T %Y"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:54
+#: ../musl/musl-1.1.14/src/time/strftime.c:86
+msgid "%m/%d/%y"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:106
+#: ../musl/musl-1.1.14/src/time/strftime.c:130
+msgid "%H:%M"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:115
+#: ../musl/musl-1.1.14/src/time/strftime.c:143
+msgid "%H:%M:%S"
+msgstr ""
+
+msgid "%I:%M:%S %p"
+msgstr ""
+
+msgid "0123456789"
+msgstr ""
+
+msgid "%a %b %e %T %Y %Z"
+msgstr ""
+
+msgid "^[yY]"
+msgstr ""
+
+msgid "^[nN]"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "."
+msgstr ""
+
+msgid "Name does not resolve"
+msgstr ""
+
+msgid "Try again"
+msgstr ""
+
+msgid "Non-recoverable error"
+msgstr ""
+
+msgid "Unknown error"
+msgstr ""
+
+msgid "Unrecognized address family or invalid length"
+msgstr ""
+
+msgid "Unrecognized socket type"
+msgstr ""
+
+msgid "Unrecognized service"
+msgstr ""
+
+msgid "System error"
+msgstr ""
+
+msgid "Overflow"
+msgstr ""
+
+msgid "No match"
+msgstr ""
+
+msgid "Invalid regexp"
+msgstr ""
+
+msgid "Unknown collating element"
+msgstr ""
+
+msgid "Unknown character class name"
+msgstr ""
+
+msgid "Trailing backslash"
+msgstr ""
+
+msgid "Invalid back reference"
+msgstr ""
+
+msgid "Missing ']'"
+msgstr ""
+
+msgid "Missing ')'"
+msgstr ""
+
+msgid "Missing '}'"
+msgstr ""
+
+msgid "Invalid contents of {}"
+msgstr ""
+
+msgid "Invalid character range"
+msgstr ""
+
+msgid "Repetition not preceded by valid expression"
+msgstr ""
+
+msgid "Hangup"
+msgstr ""
+
+msgid "Interrupt"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Illegal instruction"
+msgstr ""
+
+msgid "Trace/breakpoint trap"
+msgstr ""
+
+msgid "Aborted"
+msgstr ""
+
+msgid "Bus error"
+msgstr ""
+
+msgid "Arithmetic exception"
+msgstr ""
+
+msgid "Killed"
+msgstr ""
+
+msgid "User defined signal 1"
+msgstr ""
+
+msgid "Segmentation fault"
+msgstr ""
+
+msgid "User defined signal 2"
+msgstr ""
+
+msgid "Alarm clock"
+msgstr ""
+
+msgid "Terminated"
+msgstr ""
+
+msgid "Stack fault"
+msgstr ""
+
+msgid "Child process status"
+msgstr ""
+
+msgid "Continued"
+msgstr ""
+
+msgid "Stopped (signal)"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "Stopped (tty input)"
+msgstr ""
+
+msgid "Stopped (tty output)"
+msgstr ""
+
+msgid "Urgent I/O condition"
+msgstr ""
+
+msgid "CPU time limit exceeded"
+msgstr ""
+
+msgid "File size limit exceeded"
+msgstr ""
+
+msgid "Virtual timer expired"
+msgstr ""
+
+msgid "Profiling timer expired"
+msgstr ""
+
+msgid "Window changed"
+msgstr ""
+
+msgid "I/O possible"
+msgstr ""
+
+msgid "Power failure"
+msgstr ""
+
+msgid "Bad system call"
+msgstr ""

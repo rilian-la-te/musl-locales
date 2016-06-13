@@ -49,13 +49,13 @@ static void usage(char *name)
 
     s = basename(name);
     fprintf(stderr,
-            "Usage: %s [-a | -m] [FORMAT] name...\n\n"
+            gettext ("Usage: %s [-a | -m] [FORMAT] name...\n\n"
             "\t-a, --all-locales\tWrite names of all available locales\n"
             "\t-m, --charmaps\tWrite names of available charmaps\n"
             "\nFORMAT:\n"
             "\t-c, --category-name\tWrite names of selected categories\n"
             "\t-k, --keyword-name\tWrite names of selected keywords\n"
-            , s);
+            ), s);
 }
 
 static int argp_parse(int argc, char *argv[])
@@ -89,12 +89,12 @@ static int argp_parse(int argc, char *argv[])
             show_usage = 1;
             break;
         case '?':
-            fprintf(stderr, "Unknown option.\n");
+            fprintf(stderr, gettext("Unknown option.\n"));
             usage(progname);
             return 1;
 
         default:
-            fprintf(stderr, "This should never happen!\n");
+            fprintf(stderr, gettext("This should never happen!\n"));
             return 1;
         }
 
@@ -112,7 +112,8 @@ static void list_locale()
         DIR *dir = opendir(locpath);
         struct dirent *pDir;
         while ((pDir = readdir(dir)) != NULL){
-            printf("%s.%s\n",pDir->d_name,"utf8");
+            if (strcmp(pDir->d_name,".") && strcmp(pDir->d_name,".."))
+                printf("%s\n",pDir->d_name);
         }
     }
 }
@@ -202,8 +203,9 @@ int main(int argc, char *argv[])
       fprintf (stderr, gettext ("Cannot set LC_CTYPE to default locale"));
     if (setlocale (LC_MESSAGES, "") == NULL)
       fprintf (stderr, gettext ("Cannot set LC_MESSAGES to default locale"));
+    bindtextdomain(PACKAGE,LOCALEDIR);
+    textdomain(PACKAGE);
     /* Parse and process arguments.  */
-    textdomain (PACKAGE);
     if (argp_parse(argc, argv))
         return 1;
 

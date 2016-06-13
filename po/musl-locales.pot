@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-11 11:45+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../locale.c:52
+#, c-format
+msgid ""
+"Usage: %s [-a | -m] [FORMAT] name...\n"
+"\n"
+"\t-a, --all-locales\tWrite names of all available locales\n"
+"\t-m, --charmaps\tWrite names of available charmaps\n"
+"\n"
+"FORMAT:\n"
+"\t-c, --category-name\tWrite names of selected categories\n"
+"\t-k, --keyword-name\tWrite names of selected keywords\n"
+msgstr ""
+
+#: ../locale.c:92
+#, c-format
+msgid "Unknown option.\n"
+msgstr ""
+
+#: ../locale.c:97
+#, c-format
+msgid "This should never happen!\n"
+msgstr ""
+
+#: ../locale.c:202
+#, c-format
+msgid "Cannot set LC_CTYPE to default locale"
+msgstr ""
+
+#: ../locale.c:204
+#, c-format
+msgid "Cannot set LC_MESSAGES to default locale"
+msgstr ""
+
+#: ../locale.c:212
+#, c-format
+msgid "Cannot set LC_COLLATE to default locale"
+msgstr ""
+
+#: ../locale.c:229
+#, c-format
+msgid "Cannot set LC_ALL to default locale"
+msgstr ""
