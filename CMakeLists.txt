@@ -7,8 +7,12 @@ set(GETTEXT_PACKAGE "musl-locales")
 set(MUSL_LOCPATH ${CMAKE_INSTALL_DATAROOTDIR}/i18n/locales/musl CACHE PATH "Locales directory" FORCE)
 configure_file(config.h.in config.h)
 configure_file(locale.in 00locale.sh)
+find_package(Intl)
 set(LOCALE_SOURCES locale.c categories.c categories.h config.h)
 add_executable(locale ${LOCALE_SOURCES})
+if(Intl_LIBRARIES)
+    target_link_libraries(locale ${Intl_LIBRARIES})
+endif()
 target_compile_options(locale
   PRIVATE $<$<COMPILE_LANGUAGE:C>:-std=gnu11 -Wno-pedantic>
 )
