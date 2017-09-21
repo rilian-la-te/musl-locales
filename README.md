@@ -1,4 +1,4 @@
-# Locales support musl
+# Locales support for musl
 Locale program for musl libc
 
 This is ```/usr/bin/locale```, which works on musl libc (with limitations in musl itself).
