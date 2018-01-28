@@ -20,6 +20,6 @@ macro (add_musl_translations_directory NLS_PACKAGE LOCPATH)
         add_custom_command (TARGET musl-i18n COMMAND ${MSGFMT_EXECUTABLE} -o ${MO_OUTPUT} ${PO_INPUT})
 
         install (FILES ${MO_OUTPUT} DESTINATION
-            ${LOCPATH})
+            ${CMAKE_INSTALL_DATAROOTDIR}/${LOCPATH})
     endforeach (PO_INPUT ${PO_FILES})
 endmacro (add_musl_translations_directory)
