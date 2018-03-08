@@ -13,3 +13,8 @@ English and Russian included, also .pot file.
  - CMake backend provider (make or ninja)
  
  *For alpine, you can use this command:* ```apk add --update cmake make musl-dev gcc gettext-dev libintl```
+
+##License
+
+All translations and scripts uses [MIT](LICENSE.MIT)
+Source files for `/usr/bin/locale` uses [LGPL](LICENSE)
