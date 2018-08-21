@@ -18,6 +18,7 @@ build-main:
    - mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/usr
    - make
    - make install
+   - export MUSL_LOCPATH /usr/share/i18n/locales/musl
    - locale -a
 #  artifacts:
 #    paths:
