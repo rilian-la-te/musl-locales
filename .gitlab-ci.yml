@@ -1,0 +1,25 @@
+stages:
+  - build
+
+before_script:
+  - mkdir -p _ccache
+  - export CCACHE_BASEDIR=${PWD}
+  - export CCACHE_DIR=${PWD}/_ccache
+
+cache:
+  paths:
+    - _ccache/
+
+build-main:
+  image: alpine/edge
+  stage: build
+  script:
+   - apk add --update cmake make musl-dev gcc gettext-dev libintl
+   - mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+   - make
+   - make install
+   - locale -a
+#  artifacts:
+#    paths:
+#    - "build/vala-panel*.tar.xz"
+#    expire_in: 1 week
