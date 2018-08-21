@@ -11,7 +11,7 @@ cache:
     - _ccache/
 
 build-main:
-  image: alpine/edge
+  image: alpine:edge
   stage: build
   script:
    - apk add --update cmake make musl-dev gcc gettext-dev libintl
