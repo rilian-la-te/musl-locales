@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: es_ES\n"
+"X-Source-Language: C\n"
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:89
+#, c-format
+msgid "%2d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:92
+msgid "%Y-%m-%d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:141
+msgid "\t"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:174
+#, c-format
+msgid "+%lld"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:184
+#, c-format
+msgid "%+.2d%.2d"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strftime.c:202
+#, c-format
+msgid "%0*lld"
+msgstr ""
+
+msgid "Sun"
+msgstr "dom"
+
+msgid "Mon"
+msgstr "lun"
+
+msgid "Tue"
+msgstr "mar"
+
+msgid "Wed"
+msgstr "mie"
+
+msgid "Thu"
+msgstr "jue"
+
+msgid "Fri"
+msgstr "vie"
+
+msgid "Sat"
+msgstr "sab"
+
+msgid "Sunday"
+msgstr "domingo"
+
+msgid "Monday"
+msgstr "lunes"
+
+msgid "Tuesday"
+msgstr "martes"
+
+msgid "Wednesday"
+msgstr "miercoles"
+
+msgid "Thursday"
+msgstr "jueves"
+
+msgid "Friday"
+msgstr "viernes"
+
+msgid "Saturday"
+msgstr "sabado"
+
+msgid "Jan"
+msgstr "en"
+
+msgid "Feb"
+msgstr "feb"
+
+msgid "Mar"
+msgstr "mar"
+
+msgid "Apr"
+msgstr "abr"
+
+msgid "May"
+msgstr "may"
+
+msgid "Jun"
+msgstr "jun"
+
+msgid "Jul"
+msgstr "jul"
+
+msgid "Aug"
+msgstr "aug"
+
+msgid "Sep"
+msgstr "sep"
+
+msgid "Oct"
+msgstr "oct"
+
+msgid "Nov"
+msgstr "nov"
+
+msgid "Dec"
+msgstr "dic"
+
+msgid "January"
+msgstr "enero"
+
+msgid "February"
+msgstr "febrero"
+
+msgid "March"
+msgstr "marzo"
+
+msgid "April"
+msgstr "abril"
+
+msgid "June"
+msgstr "junio"
+
+msgid "July"
+msgstr "julio"
+
+msgid "August"
+msgstr "augosto"
+
+msgid "September"
+msgstr "septiembre"
+
+msgid "October"
+msgstr "octubre"
+
+msgid "November"
+msgstr "noviembre"
+
+msgid "December"
+msgstr "diciembre"
+
+msgid "AM"
+msgstr ""
+
+msgid "PM"
+msgstr ""
+
+msgid "%a %b %e %T %Y"
+msgstr "%a %d %b %Y %T %Z"
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:54
+#: ../musl/musl-1.1.14/src/time/strftime.c:86
+msgid "%m/%d/%y"
+msgstr "%d-%m-%y"
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:106
+#: ../musl/musl-1.1.14/src/time/strftime.c:130
+msgid "%H:%M"
+msgstr ""
+
+#: ../musl/musl-1.1.14/src/time/strptime.c:115
+#: ../musl/musl-1.1.14/src/time/strftime.c:143
+msgid "%H:%M:%S"
+msgstr ""
+
+msgid "%I:%M:%S %p"
+msgstr ""
+
+msgid "0123456789"
+msgstr ""
+
+msgid "%a %b %e %T %Y %Z"
+msgstr ""
+
+msgid "^[yY]"
+msgstr "^[+1jJyY]"
+
+msgid "^[nN]"
+msgstr ""
+
+msgid "yes"
+msgstr "sí"
+
+msgid "no"
+msgstr "no"
+
+msgid "."
+msgstr ","
