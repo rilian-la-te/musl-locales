@@ -478,25 +478,25 @@ msgid "Sat"
 msgstr "Sat"
 
 msgid "Sunday"
-msgstr "יום ראשון"
+msgstr "Sunday"
 
 msgid "Monday"
-msgstr "יום שני"
+msgstr "Monday"
 
 msgid "Tuesday"
-msgstr "יום שלישי"
+msgstr "Tuesday"
 
 msgid "Wednesday"
-msgstr "יום רביעי"
+msgstr "Wednesday"
 
 msgid "Thursday"
-msgstr "יום חמישי"
+msgstr "Thursday"
 
 msgid "Friday"
-msgstr "יום שישי"
+msgstr "Friday"
 
 msgid "Saturday"
-msgstr "יום שבת"
+msgstr "Saturday"
 
 msgid "Jan"
 msgstr "Jan"
@@ -511,7 +511,7 @@ msgid "Apr"
 msgstr "Apr"
 
 msgid "May"
-msgstr "May"
+msgstr "מאי"
 
 msgid "Jun"
 msgstr "Jun"
@@ -545,9 +545,6 @@ msgstr "מרץ"
 
 msgid "April"
 msgstr "אפריל"
-
-msgid "May"
-msgstr "מאי"
 
 msgid "June"
 msgstr "יוני"
